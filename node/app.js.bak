@@ -577,30 +577,30 @@ function sendFileMessage(recipientId) {
  *
  */
 function sendTranslation(recipientId, messageText) {
-
+console.log(messageText);
 translate(messageText, {from: 'en', to: 'hu'}).then(res => {
-    var translation=res.text;
     console.log(res.from.language.iso);
-	console.log(translation);
+	console.log(res.text);
     //=> I speak English
     //=> nl
-	
-}).catch(err => {
-    console.error(err);
-});
-
-
   var messageData = {
     recipient: {
       id: recipientId
     },
     message: {
-      text: translation,
+      text: res.text,
       metadata: "DEVELOPER_DEFINED_METADATA"
     }
   };
 
   callSendAPI(messageData);
+  
+}).catch(err => {
+    console.error(err);
+});
+
+
+
 }
 
 
