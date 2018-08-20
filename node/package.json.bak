@@ -1,16 +1,12 @@
 {
-  "name": "messenger-get-started",
+  "name": "translate-a-bot",
   "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
+  "description": "Google translation in a bot.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "lint": "jshint --exclude node_modules .",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
   },
   "author": "Facebook",
   "license": "ISC",
@@ -21,7 +17,6 @@
     "express": "^4.13.4",
     "request": "^2.72.0",
     "google-translate-api": "2.3.0"
-
   },
   "engines": {
     "node": "~4.1.2"
